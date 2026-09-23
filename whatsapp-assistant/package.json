@@ -1,0 +1,24 @@
+{
+  "name": "whatsapp-assistant",
+  "version": "0.2.0",
+  "private": true,
+  "description": "Personal WhatsApp assistant bot (Baileys-based)",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "stop": "node scripts/stop.js",
+    "restart": "node scripts/stop.js && node index.js",
+    "pm2:start": "pm2 start ecosystem.config.js",
+    "pm2:stop": "pm2 stop whatsapp-assistant",
+    "pm2:restart": "pm2 restart whatsapp-assistant",
+    "pm2:logs": "pm2 logs whatsapp-assistant"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.127.0",
+    "@hapi/boom": "^10.0.1",
+    "@whiskeysockets/baileys": "^6.7.9",
+    "dotenv": "^16.4.5",
+    "pino": "^9.4.0",
+    "qrcode-terminal": "^0.12.0"
+  }
+}
